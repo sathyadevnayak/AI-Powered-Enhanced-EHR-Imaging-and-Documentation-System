@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # patients_dataset.csv
-patients = pd.read_csv("patients_dataset.csv")
+patients = pd.read_csv("csv datasets/patients_dataset.csv")
 
 print(patients.head())
 
@@ -48,7 +48,7 @@ plt.title("Correlation Heatmap (with Encoded Categories)")
 plt.show()
 
 # clinical_notes_dataset.csv
-notes = pd.read_csv("clinical_notes_dataset.csv")
+notes = pd.read_csv("csv datasets/clinical_notes_dataset.csv")
 
 print(notes.head())
 
@@ -78,7 +78,7 @@ plt.ylabel('Number of Patients')
 plt.show()
 
 # lab_results_dataset.csv
-lab = pd.read_csv("lab_results_dataset.csv")
+lab = pd.read_csv("csv datasets/lab_results_dataset.csv")
 
 print(lab.head())
 
@@ -108,7 +108,7 @@ plt.xlabel('Average Value')
 plt.show()
 
 # prescriptions_dataset.csv
-prescription = pd.read_csv("prescriptions_dataset.csv")
+prescription = pd.read_csv("csv datasets/prescriptions_dataset.csv")
 
 print(prescription.head())
 
