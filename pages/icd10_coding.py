@@ -10,7 +10,7 @@ def render():
         st.markdown("### Search ICD-10 Database")
         
         try:
-            icd_df = pd.read_csv("../Data/ICD-10 Coding Data/ICDCode/ICDCodeSet.csv", dtype=str)
+            icd_df = pd.read_csv("Data/ICD-10 Coding Data/ICDCode/ICDCodeSet.csv", dtype=str)
             
             search_term = st.text_input("Search by diagnosis or code:", placeholder="e.g., diabetes, J209")
             
@@ -46,7 +46,7 @@ def render():
             if map_button and diagnosis_input:
                 with st.spinner("Mapping diagnosis to ICD-10 codes..."):
                     try:
-                        icd_df = pd.read_csv("../Data/ICD-10 Coding Data/ICDCode/ICDCodeSet.csv", dtype=str)
+                        icd_df = pd.read_csv("Data/ICD-10 Coding Data/ICDCode/ICDCodeSet.csv", dtype=str)
                         
                         matches = icd_df[
                             icd_df.apply(lambda row: any(word.lower() in str(row).lower() for word in diagnosis_input.split()), axis=1)

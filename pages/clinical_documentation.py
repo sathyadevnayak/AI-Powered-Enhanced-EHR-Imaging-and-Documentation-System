@@ -86,7 +86,7 @@ def render():
         st.markdown("### Existing Clinical Notes")
         
         try:
-            clinical_df = pd.read_csv("../Data/csv datasets/clinical_notes_dataset.csv", dtype=str)
+            clinical_df = pd.read_csv("Data/csv datasets/clinical_notes_dataset.csv", dtype=str)
             
             search_patient = st.text_input("Filter by Patient ID :", placeholder="PT000001")
             

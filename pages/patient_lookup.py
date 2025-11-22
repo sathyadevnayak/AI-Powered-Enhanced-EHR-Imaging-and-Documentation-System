@@ -5,7 +5,7 @@ def render():
     st.markdown('<h2 class="sub-header">👤 Patient Clinical Summary</h2>', unsafe_allow_html=True)
     
     try:
-        patients_df = pd.read_csv("../Data/csv datasets/patients_dataset.csv", dtype=str)
+        patients_df = pd.read_csv("Data/csv datasets/patients_dataset.csv", dtype=str)
         
         col1, col2 = st.columns([1, 3])
         
@@ -51,7 +51,7 @@ def render():
                 st.markdown("### 📝 Latest Clinical Notes")
                 
                 try:
-                    clinical_df = pd.read_csv("../Data/csv datasets/clinical_notes_dataset.csv", dtype=str)
+                    clinical_df = pd.read_csv("Data/csv datasets/clinical_notes_dataset.csv", dtype=str)
                     patient_notes = clinical_df[clinical_df['patient_id'] == patient_id.upper()]
                     
                     if not patient_notes.empty:
@@ -94,7 +94,7 @@ def render():
                 st.markdown("### 💊 Latest Prescription")
                 
                 try:
-                    prescriptions_df = pd.read_csv("../Data/csv datasets/prescriptions_dataset.csv", dtype=str)
+                    prescriptions_df = pd.read_csv("Data/csv datasets/prescriptions_dataset.csv", dtype=str)
                     patient_meds = prescriptions_df[prescriptions_df["patient_id"] == patient_id.upper()]
                     
                     if not patient_meds.empty:
